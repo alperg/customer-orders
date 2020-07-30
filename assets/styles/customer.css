@@ -1,0 +1,88 @@
+body {
+  overflow: none;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: 56px;
+  z-index: 1;
+}
+
+.content {
+  position: absolute;
+  top: 57px;
+  left: 0;
+  right: 0;
+  bottom: 40px;
+  padding: 20px;
+  height: calc(100vh - 98px);
+  overflow: auto;
+  background-color: #fafafa;
+}
+
+.card-wrapper {
+  animation-name: stagger;
+  animation-duration: 250ms;
+  animation-delay: 60ms;
+  animation-fill-mode: both;
+  animation-timing-function: ease-in-out;
+}
+
+.card {
+  box-shadow: 0 0 9px rgba(56, 65, 74, 0.2);
+  margin: 15px 0 15px 0;
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card:hover .card-header {
+  background-color: #bada55;
+}
+
+.left {
+  float: left;
+  width: 80px;
+}
+
+.right {
+  float: left;
+  width: 70%;
+  margin-left: 5px;
+  font-size: 80%;
+  min-height: 172px;
+}
+
+.footer {
+  position: fixed;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  height: 40px;
+  padding: 7px;
+  background-color: #444;
+  color: #fff;
+}
+
+.modal {
+  margin-top: 40px;
+}
+
+.number {
+  text-align: right;
+}
+
+@keyframes stagger {
+  0% {
+    opacity: 0;
+    transform: scale(0.6) translateX(-8px) translateY(-8px);
+  }
+  100% {
+    opacity: 1;
+  }
+}
